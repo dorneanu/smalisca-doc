@@ -52,14 +52,6 @@ smalisca.core.smalisca_module module
     :undoc-members:
     :show-inheritance:
 
-smalisca.core.smalisca_tui module
----------------------------------
-
-.. automodule:: smalisca.core.smalisca_tui
-    :members:
-    :undoc-members:
-    :show-inheritance:
-
 
 Module contents
 ---------------

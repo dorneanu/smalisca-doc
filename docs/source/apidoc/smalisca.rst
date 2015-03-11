@@ -11,18 +11,6 @@ Subpackages
     smalisca.core
     smalisca.modules
 
-Submodules
-----------
-
-smalisca.smalisca module
-------------------------
-
-.. automodule:: smalisca.smalisca
-    :members:
-    :undoc-members:
-    :show-inheritance:
-
-
 Module contents
 ---------------
 

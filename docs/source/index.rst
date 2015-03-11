@@ -240,7 +240,7 @@ Contents
    parsing
    analysis
    drawing
-   screenshots  
+   screenshots 
 
 Indices and tables
 ==================
