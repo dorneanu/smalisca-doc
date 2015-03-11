@@ -1,1 +1,1 @@
-Documentation for `smalisca <https://github.com/dorneanu/smalisca`_.
+Documentation for `smalisca <https://github.com/dorneanu/smalisca>`_.

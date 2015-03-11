@@ -129,7 +129,7 @@ First touch
 
 But first let's have a look at the tools main options::
 
-    $ ./smalisca.py --help
+    $ smalisca --help
                                 ___                                   
                                /\_ \    __                            
       ____    ___ ___      __  \//\ \  /\_\    ____    ___     __     
@@ -144,10 +144,10 @@ But first let's have a look at the tools main options::
     :: Author:       Victor <Cyneox> Dorneanu
     :: Desc:         Static Code Analysis tool for Smali files
     :: URL:          http://nullsecurity.net, http://{blog,www}.dornea.nu
-    :: Version:      0.1
+    :: Version:      1.0
     --------------------------------------------------------------------------------
 
-    usage: smalisca.py (sub-commands ...) [options ...] {arguments ...}
+    usage: smalisca (sub-commands ...) [options ...] {arguments ...}
 
     [--] Static Code Analysis (SCA) tool for Baskmali (Smali) files.
 
@@ -175,7 +175,7 @@ Parsing
 
 I'll first **parse** some directory for **Smali** files before doing the analysis stuff:: 
     
-    $ ./smalisca.py parser -l ~/tmp/FakeBanker2/dumped/smali -s java -f sqlite  -o fakebanker.sqlite
+    $ smalisca parser -l ~/tmp/FakeBanker2/dumped/smali -s java -f sqlite  -o fakebanker.sqlite
 
     ...
 
@@ -199,7 +199,7 @@ Analyzing
 Now you're free to do whatever you want with your generated exports. You can inspect the **SQLite DB**
 directly or use *smaliscas* **analysis** features::
     
-    $ ./smalisca.py analyzer -f sqlite -i fakebanker.sqlite
+    $ smalisca analyzer -f sqlite -i fakebanker.sqlite
 
     ...
 

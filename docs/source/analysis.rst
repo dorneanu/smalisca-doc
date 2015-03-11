@@ -17,7 +17,7 @@ application, you're ready to go with the analysis stuff.
 Your previously generated results should be located in a *SQLite* DB. 
 But first let's have a look at the main options::
 
-    ╰─➤  smalisca analyzer --help
+    $ smalisca analyzer --help
 
     ...
 

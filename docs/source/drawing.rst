@@ -12,6 +12,10 @@ s-command (search) to get the results and generate a graph afterwards.  You can
 specify different output formats (by -f) which best fit to your needs. A required
 output file name (-o) also has to be specified. 
 
+.. note::
+
+    Don't miss the :ref:`screenshots <page-screenshots>`.
+
 
 Available commands
 ==================
