@@ -44,6 +44,10 @@ The most important options for parsing are the *location* (-l) and the *suffix* 
 For exporting the results you'll have to specify the *output format* (-f) 
 and the correponding *output file* (-o).
 
+.. note::
+    Make sure you **delete** the sqlite file before re-running the parser. Otherwise you
+    might get confronted with DB errors.
+
 Example::
 
     $ smalisca -l /tmp/APK-dumped -s java -f sqlite -o apk.sqlite
