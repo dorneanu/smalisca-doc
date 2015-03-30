@@ -26,7 +26,7 @@ Install package
 Move into the packages root directory and then activate install it::
   
     $ cd smalisca
-    $ python setup.py install 
+    $ make install 
     ...
 
 That's it! Now you're ready to run *smalisca*.
@@ -38,7 +38,5 @@ Uninstall package
 From the root directory run::
 
     $ cd smalisca
-    $ python setup.py install --record files.txt 
-    $ cat files.txt | xargs rm -rf
-
+    $ make uninstall
 
