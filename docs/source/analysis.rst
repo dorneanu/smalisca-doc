@@ -183,6 +183,64 @@ order::
 Available commands
 ==================
 
+s
+--
+
+[S]search for a **pattern** (-p) inside **all** tables. But you can also specify the **table** (-t) you'd like
+to lookup your pattern::
+
+    smalisca>s -p decrypt                                                                                    
+    - Classes ---------------------------------------------------------------------
+    :: WARNING    No found classes.
+
+    - Properties ------------------------------------------------------------------
+    :: WARNING    No found properties.
+
+    - Const strings ---------------------------------------------------------------
+    :: WARNING    No found const strings.
+
+    - Methods ---------------------------------------------------------------------
+    :: INFO       Found 1 results
+
+    :: ID: 131
+
+            [+] Name:       decrypt
+            [+] Type:       public
+            [+] Args:       Ljava/lang/String;
+            [+] Ret:        Ljava/lang/String;
+            [+] Class:      Lcom/gmail/xlibs/Blowfish
+
+
+And now specifying the table::
+
+    smalisca>s -t const -p container=
+    - Classes ---------------------------------------------------------------------
+    :: WARNING    No found classes.
+
+    - Properties ------------------------------------------------------------------
+    :: WARNING    No found properties.
+
+    - Const strings ---------------------------------------------------------------
+    :: INFO       Found 2 results
+
+    :: ID: 39
+
+            [+] Variable:   v0
+            [+] Value:      mContainer=
+            [+] Class:      Landroid/support/v4/app/Fragment
+
+
+
+    :: ID: 833
+
+            [+] Variable:   v6
+            [+] Value:        mContainer=
+            [+] Class:      Landroid/support/v4/app/FragmentManagerImpl
+
+
+    - Methods ---------------------------------------------------------------------
+    :: WARNING    No found methods.
+
 sc
 --
 
@@ -207,6 +265,26 @@ sp
 Example::
 
     smalisca>sp -c property_class -p com/gmail
+
+
+scs
+---
+
+[S]earch for [c]onstant [s]trings. You can search for a specific **pattern** (-p) in the available **columns**::
+
+    smalisca>scs -c ?
+    ['id', 'const_string_var', 'const_string_value', 'const_string_class']
+
+Example::
+
+    smalisca>scs -c const_string_value -p http
+    +-----+------------------+--------------------+------------------------------+
+    | id  | const_string_var | const_string_value | const_string_class           |
+    +-----+------------------+--------------------+------------------------------+
+    | 321 | v11              | HTTP               | Lcom/gmail/xlibs/myFunctions |
+    | 337 | v10              | HTTP               | Lcom/gmail/xlibs/myFunctions |
+    +-----+------------------+--------------------+------------------------------+
+
 
 sm
 --
