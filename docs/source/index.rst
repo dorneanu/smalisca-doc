@@ -144,7 +144,7 @@ But first let's have a look at the tools main options::
     :: Author:       Victor <Cyneox> Dorneanu
     :: Desc:         Static Code Analysis tool for Smali files
     :: URL:          http://nullsecurity.net, http://{blog,www}.dornea.nu
-    :: Version:      1.0
+    :: Version:      0.1
     --------------------------------------------------------------------------------
 
     usage: smalisca (sub-commands ...) [options ...] {arguments ...}
