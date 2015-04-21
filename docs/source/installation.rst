@@ -23,11 +23,18 @@ You may now want to setup a virtual local environment::
 Install package
 ===============
 
-Move into the packages root directory and then activate install it::
+Now into the packages root directory and install the package:
   
     $ cd smalisca
     $ make install 
     ...
+
+Using PyPI
+----------
+smalisca is also available at PyPI. You may want to install it using::
+
+    $ pip install smalisca
+    
 
 That's it! Now you're ready to run *smalisca*.
 
