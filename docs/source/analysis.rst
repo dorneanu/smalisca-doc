@@ -31,6 +31,7 @@ But first let's have a look at the main options::
       --quiet               suppress all output
       --log-level {debug,info,warn,error,critical}
                             Change logging level (Default: info)
+      --config CONFIG_FILE  Specify config file
       -i FILENAME, --input FILENAME
                             Specify results file to read from
       -f {sqlite}, --format {sqlite}

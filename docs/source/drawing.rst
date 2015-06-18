@@ -17,6 +17,14 @@ output file name (-o) also has to be specified.
     Don't miss the :ref:`screenshots <page-screenshots>`.
 
 
+Styling
+-------
+
+The layout styles are available via a config file (*--config*). If you don't specify
+any config file then the default one will be used: *smalisca/data/config/config.conf*. 
+
+
+
 Available commands
 ==================
 

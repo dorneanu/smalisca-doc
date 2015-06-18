@@ -31,8 +31,11 @@ you can parse a directory for Smali files::
       --quiet               suppress all output
       --log-level {debug,info,warn,error,critical}
                             Change logging level (Default: info)
+      -j JOBS, --jobs JOBS  Number of jobs/processes to be used
       -l LOCATION, --location LOCATION
                             Set location (required)
+      -d DEPTH, --depth DEPTH
+                            Path location depth
       -s SUFFIX, --suffix SUFFIX
                             Set file suffix (required)
       -f {json,sqlite}, --format {json,sqlite}
@@ -52,6 +55,49 @@ Example::
 
     $ smalisca -l /tmp/APK-dumped -s java -f sqlite -o apk.sqlite
     ...
+
+
+Concurrency
+===========
+
+In order to improve performance concurrency has been added to smalisca sincer *version 0.2*. 
+You can read more in this `blog post <http://blog.dornea.nu/2015/05/06/adding-concurrency-to-smalisca/>`_
+about the problems I have encountered and their solution. 
+
+Using the `-d` (depth) parameter you can now specify up to which **folder depth** smalisca
+should look up for files and directories. When a file list has been identified for parsing 
+then you can use the `-j` (jobs) parameter to split your initial list into multiple sub-lists.
+Afterwards for every sub-list a new process will be spawned and the parsing stuff can then 
+take place. Just say we have following folder structure::
+
+    a
+    ├── b1
+    │   ├── c1
+    │   └── c2
+    ├── b2
+    │   ├── d1
+    │   └── d2
+    └── b3
+        ├── e1
+        ├── e2
+        └── e3
+
+You can now either:
+
+1) Parse files in directories: c1, c2, d1, d2, e1, e2, e3 + sub-folders
+2) Parse files in directories: b1, b2, b3 + sub-folders
+3) Parse in folder a + sub-folders
+
+Depending on the scenario you would then specify like this:
+
+1) smalisca ... -d **3**...
+2) smalisca ... -d **2** ...
+3) smalisca ... -d **1** ...
+
+..  note::
+    Concurrency is available in smalisca since version 0.2.
+ 
+
 
 
 Create new parser

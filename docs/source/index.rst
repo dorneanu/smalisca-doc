@@ -76,7 +76,18 @@ At the moment there are some few major functionalities like:
     $ ./smalisca.py analyzer -i results.sqlite -f sqlite -c cmd.txt
     ...
 
+
+  *Addition in version 0.2*: You can access the results via a web API.
+
   Have a loot at the :ref:`analysis page <page-analysis>` for more information.
+
+* **web API**
+
+  smalisca provides a REST web service in order to easily interact with the results by just using 
+  a web client. This way you can access data in your own (fancy) web application and have a clean
+  separation between backend and frontend. 
+
+  Read more about the available REST API at the :ref:`web API page <page-web-api>`. 
 
 
 
@@ -130,7 +141,7 @@ First touch
 But first let's have a look at the tools main options::
 
     $ smalisca --help
-                                ___                                   
+
                                /\_ \    __                            
       ____    ___ ___      __  \//\ \  /\_\    ____    ___     __     
      /',__\ /' __` __`\  /'__`\  \ \ \ \/\ \  /',__\  /'___\ /'__`\   
@@ -138,13 +149,12 @@ But first let's have a look at the tools main options::
     \/\____/\ \_\ \_\ \_\ \__/.\_\/\____\\ \_\/\____/\ \____\ \__/.\_\
      \/___/  \/_/\/_/\/_/\/__/\/_/\/____/ \/_/\/___/  \/____/\/__/\/_/
                                                                       
-                                                                      
 
     --------------------------------------------------------------------------------
     :: Author:       Victor <Cyneox> Dorneanu
     :: Desc:         Static Code Analysis tool for Smali files
     :: URL:          http://nullsecurity.net, http://{blog,www}.dornea.nu
-    :: Version:      0.1
+    :: Version:      0.2
     --------------------------------------------------------------------------------
 
     usage: smalisca (sub-commands ...) [options ...] {arguments ...}
@@ -159,6 +169,9 @@ But first let's have a look at the tools main options::
       parser
         [--] Parse files and extract data based on Smali syntax.
 
+      web
+        [--] Analyze results using web API.
+
     optional arguments:
       -h, --help            show this help message and exit
       --debug               toggle debug output
@@ -166,8 +179,6 @@ But first let's have a look at the tools main options::
       --log-level {debug,info,warn,error,critical}
                             Change logging level (Default: info)
       -v, --version         show program's version number and exit
-
-
 
 
 Parsing
@@ -239,6 +250,7 @@ Contents
    installation
    parsing
    analysis
+   web-api
    drawing
    screenshots 
 
